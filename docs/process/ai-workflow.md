@@ -35,6 +35,24 @@ flowchart LR
 4. **Review & commit:** the owner reviews the diff. Claude commits only when asked.
 5. **Handoff:** the progress log records what was done and what's next. The next session starts from there.
 
+## From private notes to public docs
+Things stay in the private notes while they're being thought through. They move to the public docs **just in time**, once they're decided and the next step needs them. Most ideas stay private until their turn comes, so the public docs only hold what is settled.
+
+| Private (raw) | Becomes public when… | Goes to |
+|---|---|---|
+| Idea in the inbox | The owner decides it belongs in the product | A row in `requirements.md`, and a feature spec when it is next in line |
+| Backlog draft | It is scheduled for a milestone and clear enough to build | A task spec in `docs/tasks/` (`/new-task`) |
+| Research note or spike result | It settles a decision | An ADR, or a fact in `architecture.md` |
+| Open question | The owner answers it | The spec or ADR it affects |
+| Working plan, motivations | Never | Stay private; their decisions are already in the public docs |
+
+**Why promote at all**, when Claude can read the private notes locally:
+1. **Binding vs. brainstorming.** Public docs are decisions to follow. Private notes are background and possibilities (see the source-of-truth order in `AGENTS.md`).
+2. **Visibility.** Readers of the repo see only public docs, and so do Claude sessions that run anywhere without the notes: the cloud, another machine, or a pull request review.
+3. **Focus.** A clean spec is faster and less ambiguous to build from than raw notes.
+
+Rule of thumb: **private while it's still being thought through; public once it's decided and ready to be built.**
+
 ## Where context lives
 | Layer | Location | Contents |
 |---|---|---|

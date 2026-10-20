@@ -26,3 +26,11 @@ Alternatives were not compared in depth. The choices favour well-known, well-doc
 - **Third-party load:** none directly. Caching of BrickLink calls is described in the [architecture](../architecture.md).
 - **Privacy:** none directly.
 - Exact versions and commands are set at M0 in [engineering conventions](../process/engineering.md).
+
+## Addendum (2026-10-20): alternatives considered during planning
+This records the planning-time reasoning. The decision above is unchanged.
+- **Browser-only app with no server:** rejected. The BrickLink API sends no CORS headers and needs OAuth 1.0a with IP-bound tokens, so it can't be called from a browser and its credentials must stay server-side.
+- **FastAPI instead of Django:** Django + DRF chosen for the maintainer's existing Django experience, the built-in admin, and its mature auth ecosystem.
+- **Django templates + HTMX instead of React:** React chosen because the camera and live-scan UI is highly interactive, and it keeps a path open to a React Native app.
+- **Next.js:** rejected. It would add a second (Node) server next to Django for no MVP benefit.
+- **Redis for the price cache:** deferred. A PostgreSQL table with TTL columns is enough for the MVP.

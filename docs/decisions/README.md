@@ -2,7 +2,7 @@
 
 **Status:** Living
 
-An ADR records **one** significant decision: the context, the options considered, the choice, and its consequences. ADRs are never rewritten after acceptance. A changed decision gets a new ADR that supersedes the old one.
+An ADR records **one** significant decision: the context, the options considered, the choice, and its consequences. ADRs are never rewritten after acceptance. A changed decision gets a new ADR that supersedes the old one. Clarifications that don't change the decision may be appended as a dated **Addendum**.
 
 ## Index
 | # | Decision | Status |

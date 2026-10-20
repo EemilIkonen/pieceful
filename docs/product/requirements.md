@@ -27,7 +27,7 @@ Each feature gets a spec in [`features/`](features/README.md). The order of mile
 | F-02 | Manual capture ("Take image"), phone camera and desktop webcam | Camera picker |
 | F-03 | Live scan (automatic) | Recognizes items from the camera feed without button presses, sending a frame only for a new, steady object. Feasibility: spike S-01 |
 | F-04 | Several parts per photo | Each part in one photo is recognized and priced separately. Approach set by spike S-02 |
-| F-05 | Match correction | Swap candidate, rescan, color chips, feedback to Brickognize |
+| F-05 | Match correction | The top match is selected automatically; swapping to another candidate or rescanning takes one tap. Color chips, feedback to Brickognize |
 | F-06 | Pricing | See [pricing rules](pricing.md) |
 | F-07 | Waitlist | Review, bulk-edit condition/quantity, target shown inline |
 | F-08 | Inventory | Condition, quantity, notes; sort and group |
