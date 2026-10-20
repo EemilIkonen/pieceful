@@ -1,0 +1,13 @@
+# Personal Claude Code context and settings (private notes live in ../pieceful-notes)
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
