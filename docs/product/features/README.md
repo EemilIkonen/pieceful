@@ -6,7 +6,7 @@ One file per feature: `F-xx-short-name.md`, using the template below. Features a
 
 | ID | Spec | Status |
 |---|---|---|
-| F-01 | Image upload → price card | not written |
+| F-01 | [Image upload → price card](F-01-image-upload.md) | Draft |
 | F-02 | Manual capture | not written |
 | F-03 | Live scan | not written |
 | F-04 | Several parts per photo | not written |
