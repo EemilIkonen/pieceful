@@ -91,7 +91,7 @@ Nothing about a scan is stored. The image never reaches the backend. The only se
 
 ## Out of scope
 - Camera capture (F-02), live scan (F-03), several items per photo (F-04).
-- Color correction, feedback to Brickognize, and rescan (F-05).
+- Color correction, rescan, and item number entry (F-05). Feedback to Brickognize is deferred (risk R-04).
 - Pricing warnings (F-06; thresholds still open).
 - Saving scans, waitlist, inventory (F-07, F-08).
 - User settings (F-12) and accounts (F-13).

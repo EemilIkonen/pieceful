@@ -52,20 +52,22 @@ These apply from the first increment, so later features do not require rework.
 - **Client-generated IDs:** the client creates UUIDs for scans and inventory entries, and write endpoints are idempotent. This keeps offline scanning possible later.
 - **Request deduplication:** identical in-flight requests (same item, color, and parameters) are merged, both in the client and on the server.
 - **Throttling and backoff:** the client throttles calls to Brickognize and the API, and backs off on errors and `429` responses.
-- **Catalog images:** the service worker caches Brickognize catalog images cache-first for about 30 days and revalidates with `ETag`. The server stores no images.
+- **Catalog images:** the service worker caches catalog images cache-first for about 30 days and revalidates with `ETag`. These are Brickognize catalog images, and BrickLink thumbnails for items the user enters by number (F-05). The server stores no images.
 - **Recognize once:** a crop is sent to Brickognize once. Swapping to another candidate reuses the stored candidate list.
 - **Price cache:** BrickLink price-guide results are cached server-side in a PostgreSQL table with TTL columns, shared across users. No separate cache service for the MVP.
+- **Catalog cache:** BrickLink catalog results (item lookup, known colors, color list) are cached the same way for 30 days, and "not found" results for 24 hours (both configurable), with one fetch per key. Catalog data changes rarely.
 
 ## BrickLink usage budget
 | Item | Value |
 |---|---|
 | Daily API call limit | 5,000 calls per day (**to verify**) |
 | Calls per uncached item + color | Up to 4 (new / used × sold / for sale) |
-| Uncached items per day | About 1,250 at the limit above |
+| Uncached items per day | About 1,250 at the limit above, less the catalog calls below |
+| Catalog calls | Known colors: 1 per part, only when the user opens "Other color". Item lookup: 1 per item number entered. Color list: 1 per cache lifetime for all users. All cached for 30 days ("not found" for 24 hours) |
 | Tokens | IP-bound: development, CI, and production each need their own registration |
 | Quota exhausted | Serve cached (stale) prices with a notice; never retry in a loop |
 
-Only the top-ranked candidate is priced right away. Other candidates are priced when the user swaps to them.
+Only the top-ranked candidate is priced right away. Other candidates are priced when the user swaps to them. After a correction, the price request waits until the selection has been stable for about 300 ms, and prices already fetched for a scan are reused ([F-05](product/features/F-05-match-correction.md)).
 
 ## Risks and assumptions
 | # | Assumption | Impact if wrong | Verification | Gate |

@@ -10,7 +10,7 @@ One file per feature: `F-xx-short-name.md`, using the template below. Features a
 | F-02 | Manual capture | not written |
 | F-03 | Live scan | not written |
 | F-04 | Several parts per photo | not written |
-| F-05 | Match correction | not written |
+| F-05 | [Match correction](F-05-match-correction.md) | Draft |
 | F-06 | Pricing | see [pricing rules](../pricing.md) |
 | F-07 | Waitlist | not written |
 | F-08 | Inventory | not written |
