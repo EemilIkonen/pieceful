@@ -59,6 +59,12 @@ Rule of thumb: **private while it's still being thought through; public once it'
 | Public | `AGENTS.md`, `docs/` | Settled requirements, specs, architecture, ADRs, tasks |
 | Private | separate notes repo, loaded through the gitignored `CLAUDE.local.md` | Raw ideas, drafts, research, session log |
 
+### Without the private notes
+The public repository is self-contained: every decision needed to build is in `docs/`. The notes add session state and a place for drafts. Without them, for example in a fresh clone or a cloud session:
+- **Work as usual:** the docs, `AGENTS.md`, the `design-reviewer` and `tech-lead` agents, `/adr`, `/sync-docs`, `/start-task`, and `/new-task` from a feature spec.
+- **Need the notes:** `/next` and `/handoff` (progress log), `/idea` (inbox), and `/tech-review` (it saves its report there).
+- The SessionStart hook prints a hint to start from `AGENTS.md` and `docs/README.md` instead.
+
 ## Building blocks
 - **Skills** (`.claude/skills/`): the slash commands above. Each is a short instruction file.
 - **Agents** (`.claude/agents/`): read-only reviewers that start with a fresh context, so they judge the work as written.

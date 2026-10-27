@@ -34,7 +34,7 @@ Each feature gets a spec in [`features/`](features/README.md). The order of mile
 | F-09 | Groups | User-named collections (design open) |
 | F-10 | Minifigure targets and auto-assignment | See [target assignment](target-assignment.md) |
 | F-11 | Export | Versioned JSON; BrickLink wanted-list XML of missing parts |
-| F-12 | Settings | Region, currency, VAT, headline price, default condition |
+| F-12 | Settings | Region, currency, VAT, headline price, default condition, auto-assignment strategy |
 | F-13 | Accounts | Email + password, Google sign-in; required from closed alpha 1 |
 
 ## Non-functional requirements
@@ -53,4 +53,4 @@ Each feature gets a spec in [`features/`](features/README.md). The order of mile
 | NFR-11 | **Observability:** errors and third-party call volumes are visible (set in the architecture doc before M0) |
 
 ## Out of scope (for now)
-Selling and store management, set completion, imports from other services, offline scanning, native apps. These are tracked in the roadmap backlog.
+Selling and store management. Set completion, imports from other services, offline scanning, and native apps are not planned yet; they are tracked in the roadmap backlog.

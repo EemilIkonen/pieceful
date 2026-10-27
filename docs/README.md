@@ -4,7 +4,7 @@
 | Area | Document | Status |
 |---|---|---|
 | Product | [Requirements](product/requirements.md) | Draft |
-| Product | [Feature specs](product/features/README.md) | Draft |
+| Product | [Feature specs](product/features/README.md) | Living |
 | Product | [Pricing rules](product/pricing.md) | Draft |
 | Product | [Target assignment](product/target-assignment.md) | Draft |
 | Architecture | [Architecture](architecture.md) | Draft |

@@ -23,7 +23,7 @@
 Small throwaway experiments that settle a risky assumption before work is planned on it.
 | ID | Question | Needed before |
 |---|---|---|
-| S-00 | Brickognize → BrickLink ID and color mapping (risk R-01) | M1 |
+| S-00 | Brickognize → BrickLink ID and color mapping (risk R-01), including set numbers and stickers; also whether several photos of one item in one request improve recognition ([F-05](product/features/F-05-match-correction.md)) | M1 |
 | S-01 | Live-scan trigger and camera access on iOS Safari (including installed PWA) and Android Chrome | Ordering F-03 |
 | S-02 | Multi-part segmentation: bundle size, speed, and accuracy on a phone | Ordering F-04 |
 

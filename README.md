@@ -7,7 +7,7 @@ Pieceful is a web app for identifying LEGO® parts and minifigures and seeing wh
 ## Planned features
 - **Three ways to scan:** upload an image, take a photo manually, or use automatic *Live scan* from a camera feed.
 - **Instant pricing** from the BrickLink price guide: new and used, sold and listed, with warnings when price data is thin.
-- **Several parts per photo:** parts on a plain background are detected and recognized one by one.
+- **Several parts per photo:** each part in one photo is recognized and priced separately.
 - **Inventory and minifigure completion:** scanned parts are suggested toward the figures they complete, and missing parts can be exported as a BrickLink wanted list.
 
 ## Tech stack
