@@ -55,7 +55,7 @@ These apply from the first increment, so later features do not require rework.
 - **Catalog images:** the service worker caches catalog images cache-first for about 30 days and revalidates with `ETag`. These are Brickognize catalog images, and BrickLink thumbnails for items the user enters by number (F-05). The server stores no images.
 - **Recognize once:** a crop is sent to Brickognize once. Swapping to another candidate reuses the stored candidate list.
 - **Price cache:** BrickLink price-guide results are cached server-side in a PostgreSQL table with TTL columns, shared across users. No separate cache service for the MVP.
-- **Catalog cache:** BrickLink catalog results (item lookup, known colors, color list) are cached the same way for 30 days, and "not found" results for 24 hours (both configurable), with one fetch per key. Catalog data changes rarely.
+- **Catalog cache:** BrickLink catalog results (item lookup, known colors, color list) are cached the same way for 7 days, and "not found" results for 24 hours (both configurable), with one fetch per key. Catalog data changes rarely.
 
 ## BrickLink usage budget
 | Item | Value |
@@ -63,7 +63,7 @@ These apply from the first increment, so later features do not require rework.
 | Daily API call limit | 5,000 calls per day (**to verify**) |
 | Calls per uncached item + color | Up to 4 (new / used × sold / for sale) |
 | Uncached items per day | About 1,250 at the limit above, less the catalog calls below |
-| Catalog calls | Known colors: 1 per part, only when the user opens "Other color". Item lookup: 1 per item number entered. Color list: 1 per cache lifetime for all users. All cached for 30 days ("not found" for 24 hours) |
+| Catalog calls | Known colors: 1 per part, only when the user opens "Other color". Item lookup: 1 per item number entered. Color list: 1 per cache lifetime for all users. All cached for 7 days ("not found" for 24 hours) |
 | Tokens | IP-bound: development, CI, and production each need their own registration |
 | Quota exhausted | Serve cached (stale) prices with a notice; never retry in a loop |
 

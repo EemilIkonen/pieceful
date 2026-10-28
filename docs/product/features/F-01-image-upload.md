@@ -18,7 +18,7 @@ The user picks a photo of one LEGO item and sees what it is and what it is worth
 3. **Recognize:** the browser sends the prepared image to Brickognize `POST /predict/` with color prediction enabled. A local preview of the image and a loading state are shown. The upload control is disabled while the request is in flight.
 4. **Select:** candidates are kept in Brickognize's order. All item types are accepted: part, minifigure, set, and sticker. The top candidate is selected automatically.
 5. **Price:** the browser requests the price for the selected candidate: item type, item number, and, for parts, the top predicted color. The price card appears as soon as the price arrives.
-6. **Swap:** the other candidates are listed below the card (catalog thumbnail, name, score). Tapping one selects it and requests its price. No new recognition request is made; the stored candidate list is reused.
+6. **Swap:** a "Wrong item?" control at the bottom of the screen opens a sheet that lists the other candidates (catalog thumbnail, name, score; the full correction sheet is defined in [F-05](F-05-match-correction.md)). Tapping one selects it and requests its price. No new recognition request is made; the stored candidate list is reused.
 7. **Again:** "Upload another" starts over. The previous result is discarded.
 
 ### Price card
@@ -91,7 +91,7 @@ Nothing about a scan is stored. The image never reaches the backend. The only se
 
 ## Out of scope
 - Camera capture (F-02), live scan (F-03), several items per photo (F-04).
-- Color correction, rescan, and item number entry (F-05). Feedback to Brickognize is deferred (risk R-04).
+- Color correction and item number entry (F-05). Feedback to Brickognize is deferred (risk R-04).
 - Pricing warnings (F-06; thresholds still open).
 - Saving scans, waitlist, inventory (F-07, F-08).
 - User settings (F-12) and accounts (F-13).
