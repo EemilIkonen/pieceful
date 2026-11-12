@@ -32,7 +32,7 @@ Each feature gets a spec in [`features/`](features/README.md). The order of mile
 | F-07 | Waitlist | A server-saved staging list: every scan is an entry, bulk-edit condition and quantity, price per entry and a total, target shown inline, then added to the inventory in one step |
 | F-08 | Inventory | One entry per item, color, and condition, with quantity and notes; search, filter, and sort; prices for the rows on screen only |
 | F-09 | Groups | User-named collections (design open) |
-| F-10 | Minifigure targets and auto-assignment | See [target assignment](target-assignment.md) |
+| F-10 | Minifigure targets and auto-assignment | Pick minifigures to build; scanned parts are suggested toward the figure they complete; "Mark as built" turns allocated parts into a finished figure. Rules in [target assignment](target-assignment.md) |
 | F-11 | Export | Versioned JSON; BrickLink wanted-list XML of missing parts |
 | F-12 | Settings | Region, currency, VAT, headline price, default condition, auto-assignment strategy |
 | F-13 | Accounts | Email + password, Google sign-in; required from closed alpha 1 |

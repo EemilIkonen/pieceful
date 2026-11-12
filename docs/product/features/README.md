@@ -15,7 +15,7 @@ One file per feature: `F-xx-short-name.md`, using the template below. Features a
 | F-07 | [Waitlist](F-07-waitlist.md) | Draft |
 | F-08 | [Inventory](F-08-inventory.md) | Draft |
 | F-09 | Groups | not written |
-| F-10 | Minifigure targets | see [target assignment](../target-assignment.md) |
+| F-10 | [Minifigure targets](F-10-minifigure-targets.md) | Draft; rules in [target assignment](../target-assignment.md) |
 | F-11 | Export | not written |
 | F-12 | Settings | not written |
 | F-13 | Accounts | not written |

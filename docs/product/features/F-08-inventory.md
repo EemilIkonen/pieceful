@@ -41,6 +41,7 @@ The list is loaded from the server in pages, and sorting, searching, and filteri
 ### Editing
 - Condition and quantity can be edited inline on each row, and notes in the entry's detail view.
 - Deleting an entry removes it, with a short undo that restores it with its notes. There is no confirmation dialog.
+- Once targets exist (F-10), a row also shows how many pieces are allocated to targets. Reducing a quantity below the allocated amount, deleting an entry, and changing its item release the allocations that no longer fit, after the app shows which targets are affected; merging two entries moves their allocations ([F-10](F-10-minifigure-targets.md#effects-on-the-inventory)).
 - **Select** turns on checkboxes, as in the waitlist, with "Select all" (all entries that match the current search and filters, with the count shown). The bulk actions are **Set condition**, **Set quantity**, and **Delete**, applied to the selection.
 
 ### Correcting an entry

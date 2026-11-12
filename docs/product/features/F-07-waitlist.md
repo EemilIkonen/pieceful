@@ -152,5 +152,5 @@ An entry keeps no photo and no price.
 - **When is an entry added?** The spec adds it as soon as the top match is selected, so the scan is never lost. The alternative is an explicit "Add to waitlist" tap on the price card.
 - **Outdated prices.** When a price cannot be fetched, the row shows "Price unavailable". F-01 and the pricing rules currently show an expired cached price with a notice instead. Which one applies depends on the BrickLink freshness rules and is settled with them.
 - **Undo after "Add to inventory".** Whether the user can take entries back out of the inventory is an F-08 question.
-- **Minifigures as targets.** Whether a scanned minifigure row shows the set it could fill (for example a collectible minifigure series), as the composition model allows, is settled in F-10.
+- **Minifigures as targets.** Whether a scanned minifigure row shows the set it could fill (for example a collectible minifigure series), as the composition model allows, is settled with collectible series targets, which are a later increment of F-10.
 - **List size.** A maximum number of entries, and the number of price requests in flight at once, are set in the architecture.
