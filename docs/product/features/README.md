@@ -12,8 +12,8 @@ One file per feature: `F-xx-short-name.md`, using the template below. Features a
 | F-04 | Several parts per photo | not written |
 | F-05 | [Match correction](F-05-match-correction.md) | Draft |
 | F-06 | Pricing | see [pricing rules](../pricing.md) |
-| F-07 | Waitlist | not written |
-| F-08 | Inventory | not written |
+| F-07 | [Waitlist](F-07-waitlist.md) | Draft |
+| F-08 | [Inventory](F-08-inventory.md) | Draft |
 | F-09 | Groups | not written |
 | F-10 | Minifigure targets | see [target assignment](../target-assignment.md) |
 | F-11 | Export | not written |

@@ -29,8 +29,8 @@ Each feature gets a spec in [`features/`](features/README.md). The order of mile
 | F-04 | Several parts per photo | Each part in one photo is recognized and priced separately. Approach set by spike S-02 |
 | F-05 | Match correction | The top match is selected automatically; a wrong match is fixed in a correction sheet without a new recognition request. Alternatives, color chips, item number entry. Feedback to Brickognize is deferred (risk R-04) |
 | F-06 | Pricing | See [pricing rules](pricing.md) |
-| F-07 | Waitlist | Review, bulk-edit condition/quantity, target shown inline |
-| F-08 | Inventory | Condition, quantity, notes; sort and group |
+| F-07 | Waitlist | A server-saved staging list: every scan is an entry, bulk-edit condition and quantity, price per entry and a total, target shown inline, then added to the inventory in one step |
+| F-08 | Inventory | One entry per item, color, and condition, with quantity and notes; search, filter, and sort; prices for the rows on screen only |
 | F-09 | Groups | User-named collections (design open) |
 | F-10 | Minifigure targets and auto-assignment | See [target assignment](target-assignment.md) |
 | F-11 | Export | Versioned JSON; BrickLink wanted-list XML of missing parts |
